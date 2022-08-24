@@ -1,0 +1,144 @@
+/* SOFT RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+}
+
+/* TYPOGRAPHY */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+}
+h1 {
+    font-size: 4.2rem;
+    color: hsl(300, 43%, 22%);
+}
+.main__heading p {
+    color: hsl(303, 10%, 53%);
+    line-height: 1.3;
+    font-weight: 500;
+}
+.wb {
+    color: hsl(333, 80%, 67%);
+    font-weight: 700;
+    margin-top: 4px;
+}
+/* LAYOUT */
+.root-container {
+    max-width: 80%;
+    margin: 8rem auto;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+.main__heading {
+    max-width: 300px;
+}
+.main__heading h1 {
+    margin: 0 3rem 3rem 0;
+}
+.container {
+    max-width: 400px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container--rating {
+    width: 400px;
+    color: hsl(300, 43%, 22%);
+    font-weight: bold;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    height: 5rem;
+    line-height: 5rem;
+    padding-left: 200px;
+    background-image: url('images/icon-star.svg'), url('images/icon-star.svg'), url('images/icon-star.svg'), url('images/icon-star.svg'), url('images/icon-star.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position-x: 15px, 47px, 79px, 111px, 143px;
+    background-position-y: center, center, center, center, center;
+}
+.rating-two {
+    position: relative;
+    left: 30px;
+}
+.rating-three {
+    position: relative;
+    left: 60px;
+}
+.container--review {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+.card {
+    max-width: 260px;
+    height: 180px;
+    background-color: hsl(300, 43%, 22%);
+    padding: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+.card--heading {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.card--heading img {
+    border-radius: 50%;
+    width: 40px;
+    height: auto;
+}
+.card--heading span {
+    display: block;
+}
+.card-two {
+    position: relative;
+    top: 30px;
+}
+.card-three {
+    position: relative;
+    top: 60px;
+}
+/* ADDITIONAL STYLES */
+@media screen and (max-width: 900px) {
+    .root-container {
+        max-width: 90%;
+    }
+    .main__heading h1 {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    }
+    main, .container--review {
+        flex-direction: column;
+        text-align: center;
+    }
+    .rating-two, .rating-three, .card-two, .card-three {
+        position: static;
+    }
+    .main__heading, .container, .container--rating, .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .container--rating {
+        height: 10rem;
+        background-position-x: 30%, 40%, 50%, 60%, 70%;
+        background-position-y: 20px, 20px, 20px, 20px, 20px;
+        padding: 50px 0 0 0;
+    }
+}
